@@ -76,7 +76,7 @@ const char *yyinName;
 %token ENUM
 
 /* Reserved words which aren't implemented */
-%token DEFAULT ENUM HYPER SWITCH UNION CASE
+%token DEFAULT HYPER SWITCH UNION CASE
 
 /* figure out actual types later */
 
@@ -313,7 +313,7 @@ definition     : typeDef
                | ipcType
 	         { $$ = new XDRDefinitionIPCTypeNode($1); }
                | PASS_THROUGH_CODE
-                 { $$ = new XDRDefinitionCodeNode($1)} ;
+                 { $$ = new XDRDefinitionCodeNode($1); } ;
 /*
                | constantDef
 */
