@@ -58,7 +58,7 @@ endif
 MODULE_DIR	= 
 PROJECT		= ipc
 MODULE		= 
-SUBDIRS		= etc src lisp java python test doc xdrgen
+SUBDIRS		= etc src java python test doc xdrgen
 
 #############################################################################
 # Where are the standard files?
