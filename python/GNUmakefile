@@ -109,10 +109,10 @@ CFLAGS			+= -fno-strict-aliasing
 #install_libs		:: formatters.class primFmttrs.class IPC.class
 CFLAGS			+= -fPIC -O2
 ifndef PYTHON_INC_DIR
-PYTHON_INC_DIR		= /usr/include/python2.5
+PYTHON_INC_DIR		= /usr/include/python2.7
 endif
 ifndef PYTHON_LIB_DIR
-PYTHON_LIB_DIR		= /usr/lib/python2.5
+PYTHON_LIB_DIR		= /usr/lib/python2.7
 endif
 INC_PATH		+= -I$(PYTHON_INC_DIR)
 
