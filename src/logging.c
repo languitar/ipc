@@ -323,6 +323,8 @@
 #include "globalS.h"
 
 #include <stdarg.h>
+#include <sys/time.h>
+#include <time.h>
 
 /* fflush does not flush the buffer out to NFS; This should do the trick */
 #ifdef VXWORKS
