@@ -121,7 +121,7 @@ VERSION_PREFIX	= IPC
 # Uncomment the following line to make the libraries useable by Allegro Common Lisp
 #USE_LISP	= 1
 # Uncomment the following line to make the libraries useable by Java for 64 bit machines
-#USE_JAVA	= 1
+USE_JAVA	= 1
 
 #############################################################################
 # Standard Makefile Includes

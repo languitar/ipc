@@ -146,7 +146,7 @@ OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 
 # Source files - not installed
 
-SRCS            = ipcjava.c formatters.java primFmttrs.java IPC.java
+SRCS            = ipcjava.c ipc/java/formatters.java ipc/java/primFmttrs.java ipc/java/IPC.java
 
 PRIVATE_INCS	= 
 
@@ -208,18 +208,18 @@ GEN_HEADERS = IPC.h formatters.h primFmttrs.h \
 
 CLASS_DIR = ./build/ipc/java
 
-IPC.h : IPC.java
+IPC.h : ipc/java/IPC.java
 	javah -classpath build -force -jni -o $(CLASS_DIR)/IPC.h ipc.java.IPC
 
-formatters.h : formatters.java
+formatters.h : ipc/java/formatters.java
 	javah -classpath build -force -jni -o $(CLASS_DIR)/formatters.h ipc.java.formatters
 
-primFmttrs.h : primFmttrs.java
+primFmttrs.h : ipc/java/primFmttrs.java
 	javah -classpath build -force -jni -o $(CLASS_DIR)/primFmttrs.h ipc.java.primFmttrs
 
-%.class : %.java
+%.class : ipc/java/%.java
 	$(MKDIR) build
-	javac -classpath ../.. -d build $<
+	javac -classpath .:../.. -d build $<
 
 $(LDIR)/$(JAVALIB): $(OBJS)
 	$(RM) $@
