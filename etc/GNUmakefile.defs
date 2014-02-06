@@ -281,6 +281,7 @@ RM		= rm -rf
 endif
 LD		= ld
 LD_SHARED_Solaris= ld -G -dy
+LD_SHARED_Darwin= ld -dylib -lc
 LD_SHARED_SunOS	= ld -assert pure-text
 LD_SHARED_Linux	= ld -G -dy
 LD_SHARED_wnt	= gcc -shared
